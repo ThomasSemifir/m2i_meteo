@@ -1,107 +1,46 @@
-description
-temperature
-ressenti
-min_temp
-max_temp
-pression 
-humidite
-vitesse_vent
-
-{
-    "coord": {
-        "lon": 3.0586,
-        "lat": 50.633
-    },
-    "weather": [
-        {
-            "id": 800,
-            "main": "Clear",
-            "description": "ciel dégagé",
-            "icon": "01n"
-        }
-    ],
-    "base": "stations",
-    "main": {
-        "temp": 2.59,
-        "feels_like": -2.35,
-        "temp_min": 2,
-        "temp_max": 3.33,
-        "pressure": 1018,
-        "humidity": 80
-    },
-    "visibility": 10000,
-    "wind": {
-        "speed": 4.12,
-        "deg": 180
-    },
-    "clouds": {
-        "all": 0
-    },
-    "dt": 1611685547,
-    "sys": {
-        "type": 1,
-        "id": 6559,
-        "country": "FR",
-        "sunrise": 1611646284,
-        "sunset": 1611678540
-    },
-    "timezone": 3600,
-    "id": 2998324,
-    "name": "Lille",
-    "cod": 200
-}
-
 export class MeteoModel {
-    "coord": {
-        "lon": 3.0586,
-        "lat": 50.633
-    },
-    "weather": [
-        {
-            "id": 800,
-            "main": "Clear",
-            "description": "ciel dégagé",
-            "icon": "01n"
-        }
-    ],
-    "base": "stations",
-    "main": {
-        "temp": 2.59,
-        "feels_like": -2.35,
-        "temp_min": 2,
-        "temp_max": 3.33,
-        "pressure": 1018,
-        humidity
+    coord= {
+        lon : 0,
+        lat : 0
     }
-    visibility
+    weather: [
+        {
+            id : 0,
+            main : '',
+            description : '',
+            icon : '',
+        }
+    ]
+    base = ''
+    main= {
+        temp : 0,
+        feels_like : 0,
+        temp_min : 0,
+        temp_max : 0,
+        pressure : 0,
+        humidity : 0,
+    }
+    visibility = 0
     wind= {
-        speed,
-        deg
+        speed : 0,
+        deg : 0
     }
     clouds = {
-        all
+        all : ''
     }
-    dt
+    dt = ''
     sys = {
-        type,
-        id,
-        country,
-        sunrise,
-        sunset
+        type : '',
+        id : 0,
+        country : '',
+        sunrise : 0,
+        sunset : 0
     }
-    timezone
-    id
-    name
-    cod
+    timezone = ''
+    id = 0
+    name = ''
+    cod = ''
 
-    constructor(description, temperature,ressenti,min_temp,max_temp,pression,humidite,vitesse_vent) {
-        this.description = description;
-        this.temperature = temperature;
-        this.ressenti = ressenti;
-        this.min_temp = min_temp;
-        this.max_temp = max_temp;
-        this.pression = pression;
-        this.humidite = humidite;
-        this.vitesse_vent = vitesse_vent;
+    constructor() {
     }
 }
