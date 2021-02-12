@@ -1,7 +1,9 @@
 import { React } from 'react'
-import { Bouton } from './Bouton'
+import { Bouton } from '../commons/Bouton'
+
 
 export const FormulaireMeteo = (props) => {
+// export const FormulaireMeteo = ({ville, handleChange, rechercheVille, rechercheLocalisation}) => {
 
     const {ville, handleChange, rechercheVille, rechercheLocalisation} = props;
     const label= {
@@ -12,7 +14,7 @@ export const FormulaireMeteo = (props) => {
     return (
         <form style={{display:"flex", flexDirection:"row", justifyContent:"true"}} onSubmit={(event) => event.preventDefault()}>
             <label htmlFor="ville" style={label}>Rechercher une ville: </label>
-            <input id= "ville" name="ville" type="text" value={ville} onChange={handleChange}></input>
+            <input id= "ville" name="ville" type="text" value={ville} onChange={handleChange}/>
                 <Bouton onClick={rechercheLocalisation}>📍</Bouton>
                 <Bouton onClick={rechercheVille}>Chercher</Bouton>  
         </form>

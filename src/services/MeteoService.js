@@ -18,7 +18,6 @@ class MeteoService {
     getMeteoByLocalisation = async (lon, lat) => {
         return await fetch(`${url}?lat=${lat}&lon=${lon}&appid=${apiKey}&lang=fr&units=metric`,init).then(res => res.json())
     }
-
 }
 
 export const meteoService = Object.freeze(new MeteoService())
